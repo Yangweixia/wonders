@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>制作Html内容</title>
+		<link rel="stylesheet" type="text/css" href="../../daily/20171121/personFlup.css"/>
+		<style type="text/css">
+			#module{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		
+         <!--
+         	作者：hebo@wondersgroup.com
+         	时间：2017-11-22
+         	描述：通过模块添加HTML
+         -->
+         <form id="addRow">
+         	<input type="text" list="moduleRow" name="mod" required="required" placeholder="请选择模块" />
+         	<datalist id="moduleRow">
+			</datalist>
+			<input type="button" value="添加行" onclick="createHtml.appendRow()" />
+			<input type="button" value="删除最后一行" onclick="createHtml.deleteRow()" />
+         </form>
+          <form id="addCol">
+         	<input type="text" list="moduleCol" name="mod" placeholder="请选择模块" required="required" />
+         	<datalist id="moduleCol">
+			</datalist>
+			<input type="text" name="title" placeholder="请输入标题" required="required" />
+			<input type="text" name="unit" placeholder="请输入单位" required="required" />
+			<input type="text" name="buttonName" placeholder="请输入按钮名称" required="required" />
+			<input type="button" value="添加列" onclick="createHtml.appendCol()" />
+			<input type="button" value="删除最后一列" onclick="createHtml.deleteCol()" />
+         </form>
+		<div id="printPage">
+			<h1 style="margin:60px auto 10px;text-align:center;">随访记录服务表</h1>
+			<div class="leading-in">
+				<a href="javascript:void(0);" >引入最近随访</a>
+				<a href="javascript:void(0);" >最近生理指标</a>
+			</div>
+			<div class="FlueContent" id="content">
+				
+			</div>
+		</div>
+		<div id="module">
+			<div id="row">
+				<div id="moduleRow1">
+					<div class="row">
+					</div>
+				</div>
+				<div id="drug">
+					<div class="row drug">
+						<div class="col1">
+							<label for="">药品</label>
+							<div class="left">
+								<input type="text">
+							</div>
+						</div>
+						<div class="col4">
+							<label for="">频率</label>
+							<div class="left">
+								<div class="select">
+									<input type="text">
+								</div>
+								<dl>
+								</dl>
+							</div>
+						</div>
+						<div class="col5">
+							<label for="">用量</label>
+							<div class="left">
+								<input type="text">
+							</div>
+							<div class="left">
+								<input type="text">
+							</div>
+						</div>
+						<div class="col5">
+							<input type="button" value="添加">
+						</div>
+						<div class="col5">
+							<input type="button" value="常用药引入">
+						</div>
+						<div style="display: block;">
+							<table cellpadding="0" cellspacing="0">
+								<colgroup>
+					                <col width="200">
+					                <col width="100">
+					                <col width="100">
+					                <col width="100">
+					                <col width="100">
+					            </colgroup>
+				            	<thead>
+						            <tr>
+						                <th>药品名称</th>
+						                <th>用药频率</th>
+						                <th>用药剂量</th>
+						                <th>剂量单位</th>
+						                <th>操作</th>
+						            </tr>
+					            </thead>
+					            <tbody>
+					            </tbody>
+					        </table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="col">
+				<div id="nomalCol">
+					<div class="col1">
+						<label for=""><span>*</span>{title}</label>
+						<div class="left">
+							<input type="text" />
+						</div>
+					</div>
+				</div>
+				<div id="nomalColSelect">
+					<div class="col1">
+						<label for=""><span>*</span>{title}</label>
+						<div class="left">
+							<div class="select">
+								<input type="text" />
+							</div>
+							<dl>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div id="nomalCol3">
+					<div class="col2">
+						<label for=""><span>*</span>{title}</label>
+						<div class="left">
+							<input type="text" />
+						</div>
+						<div>
+							<span>{unit}</span>
+						</div>
+					</div>
+				</div>
+				<div id="2NonmalCol">
+					<div class="col3">
+						<label for=""><span>*</span>{title}</label>
+						<div class="left">
+							<input type="text" />
+						</div>
+					</div>
+				</div>
+				<div id="3NomalColTextarea">
+					<div class="col6">
+						<label for="">
+							<span style="float: left;">{title}</span>
+							<button>{buttonName}</button>
+						</label>
+						<div class="left">
+							<textarea style="min-height: 70px;"></textarea>
+						</div>
+					</div>
+				</div>
+				<div id="3NomalCol">
+					<div class="col8">
+						<label for="">
+							转诊机构科室
+						</label>
+						<div class="left">
+							<input type="text">
+						</div>
+					</div>
+				</div>
+				<div id="tesu">
+					<div class="col7">
+						<div class="left">
+							<input type="text" disabled="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../common/js/jquery-3.2.1.js"></script>
+		<script src="createHtml.js"></script>
+	</body>
+</html>

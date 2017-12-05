@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>高血压患者健康管理报表</title>
+		<style>
+			body {
+			    padding-top: 50px;
+			}
+			#printPage{
+		    	width: 100%;
+		    	margin: 0 auto;
+		    	position: relative;
+		    	page-break-after: always;
+		    	overflow: hidden;
+			}
+			table{
+				width:100%;
+				margin:0 auto;
+    			border-right: 1px solid #000;
+    			border-bottom: 1px solid #000;
+			}
+			th{
+				text-align: center;
+				vertical-align: top;
+				font-weight: normal;
+				line-height: 34px;
+			}
+			td,th {
+		    	border-left: 1px solid #000;
+		    	border-top: 1px solid #000;
+		    	min-height: 44px;
+		    	padding:0 4px;
+				font-size: 16px;
+		    } 
+		    .col1{
+		    	width: 100px;
+		    }
+		    span{
+		    	min-width:50px;
+		    	padding: 0 10px;
+		    	display: inline-block;
+		    }
+		    h1,h2{
+		    	text-align: center;
+		    }
+		</style>
+	</head>
+	<body>
+		<div id="printPage">
+			<h2 style="font-weight: normal;">高血压患者健康管理报表</h2>
+			<div style="position: relative;">
+				<label for="" style="position: absolute; left: 6.5%;">填报人：<span name=''></span></label>
+				<div style="width: 50%; float: right;">
+					<label for="">填报单位：<span name=''></span></label>
+				</div>
+			</div>
+			<table cellpadding="0" cellspacing="0" id="table">
+				<colgroup>
+					<col class="col1" />
+					<col class="col1" />
+					<col class="col1" />
+					<col class="col1" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th>省</th>
+						<th>市</th>
+						<th>县</th>
+						<th>地区编码</th>
+						<th>年内辖区内高血压患者总人数（人）</th>
+						<th>辖区内已管理的高血压患者人数（人）</th>
+						<th>按照规范要求进行高血压患者健康管理的人数（人）</th>
+						<th>高血压患者规范管理率（%）</th>
+						<th>最近一次随访血压达标人数（人）</th>
+						<th>管理人群血压控制率（%）</th>
+						<th>在管高血压患者家庭医生签约人数（人）</th>
+						<th>在管高血压患者家庭医生签约率（%）</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>四川省</td>
+						<td>成都市</td>
+						<td>金牛区</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					
+				</tfoot>
+			</table>
+			
+		</div>
+		<script>
+			$(function(window){
+				jbbb.init('gxy');
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.hide{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" id='send' placeholder="请输入你要传入的数据"/>
+		<button onclick="test()">test</button>
+		<div class="hide">
+			<input type="text" id='access' />
+		</div>
+		<script src="../../common/js/jquery-3.2.1.min.js"></script>
+		<script>
+			function test(){
+				$("#access").val($("#send").val());
+				$("div").toggleClass("hide")
+			}
+		</script>
+	</body>
+</html>

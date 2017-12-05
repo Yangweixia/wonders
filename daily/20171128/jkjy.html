@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>健康教育管理报表</title>
+		<style>
+			body {
+			    padding-top: 50px;
+			}
+			#printPage{
+		    	width: 100%;
+		    	margin: 0 auto;
+		    	position: relative;
+		    	page-break-after: always;
+		    	overflow: hidden;
+			}
+			table{
+				width:100%;
+				margin:0 auto;
+    			border-right: 1px solid #000;
+    			border-bottom: 1px solid #000;
+			}
+			th{
+				text-align: center;
+				vertical-align: top;
+				font-weight: normal;
+				line-height: 34px;
+			}
+			td,th {
+		    	border-left: 1px solid #000;
+		    	border-top: 1px solid #000;
+		    	min-height: 44px;
+		    	padding:0 4px;
+				font-size: 16px;
+		    } 
+		    .col1{
+		    	width: 100px;
+		    }
+		    span{
+		    	min-width:50px;
+		    	padding: 0 10px;
+		    	display: inline-block;
+		    }
+		    h1,h2{
+		    	text-align: center;
+		    }
+		</style>
+	</head>
+	<body>
+		<div id="printPage">
+			<h2 style="font-weight: normal;">健康教育管理报表</h2>
+			<div style="position: relative;">
+				<label for="" style="position: absolute; left: 6.5%;">填报人：<span name=''></span></label>
+				<div style="width: 50%; float: right;">
+					<label for="">填报单位：<span name=''></span></label>
+				</div>
+			</div>
+			<table cellpadding="0" cellspacing="0" id="table">
+				<colgroup>
+					<col class="col1" />
+					<col class="col1" />
+					<col class="col1" />
+					<col class="col1" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th>省</th>
+						<th>市</th>
+						<th>县</th>
+						<th>地区编码</th>
+						<th>发放健康教育印刷资料种类（种）</th>
+						<th>发放健康教育印刷资料数量（本）</th>
+						<th>播放健康教育音像资料种类（种）</th>
+						<th>播放健康教育音像资料次数（次）</th>
+						<th>播放健康教育音像资料的时间（小时）</th>
+						<th>健康教育宣传栏设置个数（个）</th>
+						<th>健康教育宣传栏内容更新次数（次）</th>
+						<th>举办健康教育讲座次数（次）</th>
+						<th>举办健康教育讲座参加人数（人）</th>
+						<th>举办健康教育咨询活动次数（次）</th>
+						<th>举办健康教育咨询活动人数（人）</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>四川省</td>
+						<td>成都市</td>
+						<td>金牛区</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					
+				</tfoot>
+			</table>
+			
+		</div>
+		<script>
+			$(function(window){
+				jbbb.init('jkjy');
+			})
+		</script>
+	</body>
+</html>
